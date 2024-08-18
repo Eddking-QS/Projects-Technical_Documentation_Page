@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+.texturina-font {
+    font-family: 'Texturina', serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+html body {
+    font-family: 'Texturina', serif;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+html {
+    font-size: 20px;
+}
+
+.Author {
+    color: #a68dde;
+}
+small > a {
+    margin: 0;
+}
+
+ul.list {
+    list-style-type: square;
+}
+
+.background {
+    background-image: url(Images/devbg.jpg);
+    background-size: cover;
+    position: absolute;
+    max-height: 100vh;
+    width: 100%;
+    z-index: -3;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 100%;
+    height: 100%;
+    background-image: url(Images/devbg.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    z-index: -2;
+}
+
+#content {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    position: relative;
+}
+
+.header {
+    color: #f0f0f0;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+}
+
+.header h1 {
+    color: #6699cc;
+    margin-top: 0.2em;
+    line-height: normal;
+    word-wrap: break-word;
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-bottom: 0;
+    letter-spacing: 0.05em;
+}
+
+h3 {
+    color: #a68dde;
+    text-decoration: underline;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2em;
+    color: #6699cc;
+}
+
+.main-doc {
+    width: 80%;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.main-doc section {
+    padding: 30px;
+}
+
+.main-doc ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.nav {
+    width: 30%;
+    max-width: 350px;
+    line-height: 2;
+    border-right: 1px solid #fff;
+}
+
+.nav a:hover {
+    color: #c737eb;
+    transition: color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 15px;
+    color: #66cccc;
+}
+
+a::active {
+    color: #c737eb;
+}
+
+a:focus {
+    outline: 2px solid #c737eb;
+    outline-offset: 2px;
+}
+
+.nav li {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    #content {
+        flex-direction: column;
+    }
+    .nav {
+        margin-top: 0;
+        width: 100%;
+        max-width: 100vw;
+        border-right: none;
+        line-height: normal;
+        height: auto;
+        max-height: 50vh;
+        overflow-y: auto;
+    }
+    html {
+        font-size: 16px;
+    }
+    .header h1 {
+        font-size: 2em;
+    }
+    .nav li {
+        text-align: center;
+        padding: 8px 0;
+    }
+    .main-doc {
+        width: 100%;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .nav li {
+        padding: 8px 0;
+    }
+    .main-doc {
+        width: 100%;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+}
+
+.main-doc section {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main-doc::-webkit-scrollbar {
+    width: 12px;
+}
+
+.main-doc::-webkit-scrollbar-thumb {
+    background-color: #6699cc;
+    border-radius: 10px;
+    border: 3px solid #000000;
+}
+
+.main-doc::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    border-radius: 10px;
+}
+.nav::-webkit-scrollbar {
+    width: 12px;
+}
+
+.nav::-webkit-scrollbar-thumb {
+    background-color: #6699cc;
+    border-radius: 10px;
+    border: 3px solid #000000;
+}
+
+.nav::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    border-radius: 10px;
+}
