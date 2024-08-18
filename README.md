@@ -4,7 +4,7 @@
 
 This project is a webpage containing research on the various stages of the development process as well as a comprehensive list of the best tools to utilize at each stage. This is one of the projects required to obtain the Responsive Web Design Certificate from freeCodeCamp.
 
-**Open Source - Details Below**
+**Open Source - Contribution Details Below**
 
 ## Features
 
